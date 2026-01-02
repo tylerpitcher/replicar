@@ -1,0 +1,30 @@
+image:
+  repository: tylerpitcher/shopping-cart
+  tag: a2be9fe
+
+deployment:
+  port: 3000
+
+ingress:
+  enabled: true
+
+env:
+  - name: HOST
+    value: "https://www.tylerpitcher.com/replicar"
+  - name: BASE_PATH
+    value: "/replicar"
+  - name: TOKEN
+    valueFrom:
+      secretKeyRef:
+        name: shopping-cart-secret
+        key: TOKEN
+  - name: MONGO_URI
+    valueFrom:
+      secretKeyRef:
+        name: shopping-cart-secret
+        key: MONGO_URI
+  - name: STRIPE_KEY
+    valueFrom:
+      secretKeyRef:
+        name: shopping-cart-secret
+        key: STRIPE_KEY
