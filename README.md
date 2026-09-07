@@ -1,5 +1,5 @@
-# Shopping Cart
-An online store built with NextJs &amp; connected to Stripe.
+# Replicar
+An online store built with NextJs &amp; connected to Stripe for replica cars.
 
 ## Live Version
 https://tylerpitcher.com/replicar
